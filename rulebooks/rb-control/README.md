@@ -118,7 +118,7 @@ This attestation type is classified as
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                                  | **Data type** |
 |---------------------|------------------------|---------------------------------------------------------------------------------|---------------|
-| family_name         | --                     | Last name(s) or surname(s) of the natural person who holds control              | String        |
+| family_name         | [familyName](https://w3id.org/ebwv#familyName)                     | Last name(s) or surname(s) of the natural person who holds control              | String        |
 | given_name          | --                     | First name(s), including middle name(s) where applicable, of the natural person | String        |
 
 **LegalPerson Attributes**
