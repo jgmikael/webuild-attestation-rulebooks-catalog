@@ -148,12 +148,12 @@ Each element in the `facts` array SHALL contain the following attributes:
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                         | **Data type** |
 |---------------------|------------------------|--------------------------------------------------------|------------|
-| id                  | ---                    | Unique identifier of the fact                          | String                          |
-| concept             | ---                    | Name of the reported metric (e.g., Revenue, NetIncome) | String                          |
-| value               | ---                    | Reported value of the fact                             | Decimal                         |
-| unit                | ---                    | Unit of measurement (e.g., EUR, %, shares)             | String (ISO 4217 for currencies) |
-| period_start        | ---                    | Start date of the reporting period                     | ISO 8601 (YYYY-MM-DD)           |
-| period_end          | ---                    | End date of the reporting period                       | ISO 8601 (YYYY-MM-DD)           |
+| id                  | [dcterms:identifier](http://purl.org/dc/terms/identifier)  | Unique identifier of the fact                          | String                          |
+| concept             | [observedMetric](https://w3id.org/ebwv#observedMetric)  | Name of the reported metric (e.g., Revenue, NetIncome) | String                          |
+| value               | [sdmx-measure:obsValue](http://purl.org/linked-data/sdmx/2009/measure#obsValue) | Reported value of the fact                             | Decimal                         |
+| unit                | [sdmx-concept:unitMeasure](http://purl.org/linked-data/sdmx/2009/concept#unitMeasure) | Unit of measurement (e.g., EUR, %, shares)             | String (ISO 4217 for currencies) |
+| period_start        | [dcat:startDate](https://www.w3.org/ns/dcat#startDate) | Start date of the reporting period                     | ISO 8601 (YYYY-MM-DD)           |
+| period_end          | [dcat:endDate](https://www.w3.org/ns/dcat#endDate) | End date of the reporting period                       | ISO 8601 (YYYY-MM-DD)           |
 
 ### 2.3 Optional attributes
 
