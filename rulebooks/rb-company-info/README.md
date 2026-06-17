@@ -140,7 +140,7 @@ This attestation type MAY be classified as:
 | **Data Identifier** | **Semantic Reference** | **Definition**                                         | **Data type** |
 |---------------------|------------------------|--------------------------------------------------------|-------------|
 | taxonomy            | [conformsToTaxonomy](https://w3id.org/ebwv#conformsToTaxonomy) | Financial reporting standard used (e.g., IFRS, GAAP)   | String        |
-| facts               | --                     | List of reported financial facts                       | Array [Fact]  |
+| facts               | [qb:dataSet](http://purl.org/linked-data/cube#dataSet) (inverse of) | List of reported financial facts                       | Array [Fact]  |
 
 #### 2.2.3 Fact Object Attributes
 
