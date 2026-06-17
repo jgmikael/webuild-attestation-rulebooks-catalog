@@ -159,8 +159,8 @@ Each element in the `facts` array SHALL contain the following attributes:
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                                                                                                                                           | **Data type** |
 |---------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| trade_alias         | --                     | Registered trade names or aliases under which the legal entity operates. MAY contain zero or more text values.                                                                           | Array of tstr |
-| previous_legal_name | --                     | Previously registered legal name(s) of the entity, as recorded in official company registers prior to the current legal name. MAY contain zero or more text values.                      | Array of tstr |
+| trade_alias         | [alternativeName](https://w3id.org/ebwv#alternativeName) | Registered trade names or aliases under which the legal entity operates. MAY contain zero or more text values.                                                                           | Array of tstr |
+| previous_legal_name | [previousLegalName](https://w3id.org/ebwv#previousLegalName) | Previously registered legal name(s) of the entity, as recorded in official company registers prior to the current legal name. MAY contain zero or more text values.                      | Array of tstr |
 
 ### 2.4 Conditional attributes
 
@@ -168,20 +168,20 @@ No conditional attributes are defined for this attestation type. All attributes 
 
 ### 2.5 Mandatory metadata
 
-| **Data Identifier**        | **Definition**                                                                                                                                                     | **Data type**   |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| issuance_date              | The date and time when the attestation was issued (ISO 8601)                                                                                                       | DateTime        |
-| expiry_date                | The date and time when the attestation expires (ISO 8601)                                                                                                          | DateTime        |
-| issuing_entity             | The identifier of the legal entity that issued the attestation (typically the subject entity itself for self-issued attestations, or the QTSP identifier for QEAA) | String          |
-| attestation_legal_category | Indicates the legal category of this attestation ("EAA" )                                                                                                          | String          |
-| vct                        | A URI or other collision-resistant identifier that defines the type of the SD-JWT Verifiable Credential                                                            | String          |
+| **Data Identifier**       | **Semantic Reference**  | **Definition**                                                                                                                                                     | **Data type**   |
+|-------------------------|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| issuance_date   | [cred:validFrom](https://www.w3.org/2018/credentials/#validFrom) | The date and time when the attestation was issued (ISO 8601)                                                                                                       | DateTime        |
+| expiry_date     | [cred:validUntil](https://www.w3.org/2018/credentials/#validUntil)  | The date and time when the attestation expires (ISO 8601)                                                                                                          | DateTime        |
+| issuing_entity    | [cred:issuer](https://www.w3.org/2018/credentials/#issuer)  | The identifier of the legal entity that issued the attestation (typically the subject entity itself for self-issued attestations, or the QTSP identifier for QEAA) | String          |
+| attestation_legal_category | [attestationLegalCategory](https://w3id.org/ebwv#attestationLegalCategory) | Indicates the legal category of this attestation ("EAA" )                                                                                                          | String          |
+| vct    |                    | A URI or other collision-resistant identifier that defines the type of the SD-JWT Verifiable Credential                                                            | String          |
 
 ### 2.6 Optional metadata
 
-| **Data Identifier** | **Definition**                                                             | **Data type** |
-|---------------------|----------------------------------------------------------------------------|---------------|
-| trust_anchor_url    | URL where the trust anchor for verifying this attestation can be retrieved | URI           |
-| schema_version      | Version of the schema used                                                 | String        |
+| **Data Identifier**  | **Semantic Reference**  | **Definition**                                                             | **Data type** |
+|------------------|---|----------------------------------------------------------------------------|---------------|
+| trust_anchor_url  | cred:? | URL where the trust anchor for verifying this attestation can be retrieved | URI           |
+| schema_version    | cred:? | Version of the schema used                                                 | String        |
 
 ### 2.7 Conditional metadata
 
