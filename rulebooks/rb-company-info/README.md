@@ -133,7 +133,7 @@ This attestation type MAY be classified as:
 |----------------------|------------------------|-----------------------------------------------------------------------|---------------|
 | employee_number      | ...                    | Total number of employees in the legal entity at the time of reporting | uint          |
 | trade_alias          | ...                    | Registered trade names or aliases under which the legal entity operates | Array of tstr |
-| previous_legal_name  | ...                    | Previously registered legal name(s) of the entity                    | Array of tstr |
+| previous_legal_name  | [previousLegalName](https://w3id.org/ebwv#previousLegalName) | Previously registered legal name(s) of the entity                    | Array of tstr |
 
 #### 2.2.2 financial_statements Object Attributes
 
