@@ -131,15 +131,15 @@ This attestation type MAY be classified as:
 
 | **Data Identifier**  | **Semantic Reference** | **Definition**                                                        | **Data type** |
 |----------------------|------------------------|-----------------------------------------------------------------------|---------------|
-| employee_number      | ...                    | Total number of employees in the legal entity at the time of reporting | uint          |
-| trade_alias          | ...                    | Registered trade names or aliases under which the legal entity operates | Array of tstr |
+| employee_number      | [numberOfEmployees](https://w3id.org/ebwv#numberOfEmployees) | Total number of employees in the legal entity at the time of reporting | uint          |
+| trade_alias          | [alternativeName](https://w3id.org/ebwv#alternativeName) | Registered trade names or aliases under which the legal entity operates | Array of tstr |
 | previous_legal_name  | [previousLegalName](https://w3id.org/ebwv#previousLegalName) | Previously registered legal name(s) of the entity                    | Array of tstr |
 
 #### 2.2.2 financial_statements Object Attributes
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                         | **Data type** |
 |---------------------|------------------------|--------------------------------------------------------|-------------|
-| taxonomy            | --                     | Financial reporting standard used (e.g., IFRS, GAAP)   | String        |
+| taxonomy            | [conformsToTaxonomy](https://w3id.org/ebwv#conformsToTaxonomy) | Financial reporting standard used (e.g., IFRS, GAAP)   | String        |
 | facts               | --                     | List of reported financial facts                       | Array [Fact]  |
 
 #### 2.2.3 Fact Object Attributes
