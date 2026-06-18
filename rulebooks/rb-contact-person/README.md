@@ -163,23 +163,23 @@ This attestation type is classified as:
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                                                                                 | **Optionality**  | **Encoding format** |
 |---------------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------|------------------|---------------------|
 | legal_person_id     | [legalIdentifier](https://w3id.org/ebwv#legalIdentifier) | EBW Organization Identifier — Identifier of the employing legal entity according to the European Business Wallet (EBW) framework | M                | tstr                |
-| contact_person      | --                     | Object representing details of an individual contact person. This can be repeated for multiple contacts.                        | M (at least one) | Object              |
+| contact_person      | [org:hasMembership](https://www.w3.org/ns/org#hasMembership).[org:member](https://www.w3.org/ns/org#member) | Object representing details of an individual contact person. This can be repeated for multiple contacts.                        | M (at least one) | Object              |
 
 **ContactPerson Attributes**
 
 | **Data Identifier** | **Semantic Reference**                                                                    | **Definition**                                                                                        | **Optionality** | **Encoding format** |
 |---------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------|---------------------|
-| given_name          | [givenName – Schema.org Property](https://schema.org/givenName)                           | Given name. In the U.S., the first name of a Person.                                                  | M               | tstr                |
-| family_name         | [familyName – Schema.org Property](https://schema.org/familyName)                         | Family name. In the U.S., the last name of a Person.                                                  | M               | tstr                |
-| role                | [The Organization Ontology](https://www.w3.org/TR/vocab-org/)                             | Denotes a role that a Person takes in an organization (e.g., sales, finance, quality, logistics)      | M               | tstr                |
-| employee_identifier | --                                                                                        | An alphanumeric identifier of the employee assigned by the organization                               | M               | tstr                |
-| email               | [Core Public Organisation Vocabulary (CPOV)](https://joinup.ec.europa.eu/collection/cpov) | An electronic address through which the Contact Person can be contacted                               | M               | tstr                |
+| given_name          | [givenName](https://w3id.org/ebwv#givenName)<br>[givenName – Schema.org Property](https://schema.org/givenName)  | Given name. In the U.S., the first name of a Person.                                                  | M               | tstr                |
+| family_name         | [familyName](https://w3id.org/ebwv#familyName)<br>[familyName – Schema.org Property](https://schema.org/familyName)   | Family name. In the U.S., the last name of a Person.                                                  | M               | tstr                |
+| role                | [org:role](https://www.w3.org/ns/org#role) | Denotes a role that a Person takes in an organization (e.g., sales, finance, quality, logistics)      | M               | tstr                |
+| employee_identifier | [employee](https://w3id.org/ebwv#employee).[identifier](https://w3id.org/ebwv#identifier) | An alphanumeric identifier of the employee assigned by the organization                               | M               | tstr                |
+| email               | [hasEmail](https://w3id.org/ebwv#hasEmail) <br> [Core Public Organisation Vocabulary (CPOV)](https://joinup.ec.europa.eu/collection/cpov) | An electronic address through which the Contact Person can be contacted                               | M               | tstr                |
 
 ### 2.3 Optional attributes
 
 | **Data Identifier** | **Semantic Reference**                                                                     | **Definition**                                                       | **Optionality** | **Encoding format** |
 |---------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------|-----------------|---------------------|
-| telephone           | [Core Public Organisation Vocabulary (CPOV)](https://joinup.ec.europa.eu/collection/cpov) | A telephone number through which the Contact Person can be contacted | O               | tstr                |
+| telephone           | [hasTelephone](https://w3id.org/ebwv#hasTelephone) <br> [Core Public Organisation Vocabulary (CPOV)](https://joinup.ec.europa.eu/collection/cpov) | A telephone number through which the Contact Person can be contacted | O               | tstr                |
 
 ### 2.4 Conditional attributes
 
@@ -188,20 +188,20 @@ mandatory or optional as specified above.
 
 ### 2.5 Mandatory metadata
 
-| **Data Identifier**        | **Definition**                                                                                                                                               | **Data type** |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| issuance_date              | The date and time when the attestation was issued (ISO 8601)                                                                                                 | DateTime      |
-| expiry_date                | The date and time when the attestation expires (ISO 8601)                                                                                                    | DateTime      |
-| issuing_entity             | The identifier of the legal entity that issued the attestation (typically the employing organization for self-issued EAA attestations)                       | String        |
-| attestation_legal_category | Indicates the legal category of this attestation ("EAA")                                                                                                     | String        |
-| vct                        | A URI or other collision-resistant identifier that defines the type of the SD-JWT Verifiable Credential                                                      | String        |
+| **Data Identifier**      | **Semantic Reference**     | **Definition**                                                                                                                                               | **Data type** |
+|-------------------------|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| issuance_date          |  [cred:validFrom](https://www.w3.org/2018/credentials/#validFrom)  | The date and time when the attestation was issued (ISO 8601)                                                                                                 | DateTime      |
+| expiry_date            |  [cred:validUntil](https://www.w3.org/2018/credentials/#validUntil)  | The date and time when the attestation expires (ISO 8601)                                                                                                    | DateTime      |
+| issuing_entity         |  [cred:issuer](https://www.w3.org/2018/credentials/#issuer)  | The identifier of the legal entity that issued the attestation (typically the employing organization for self-issued EAA attestations)                       | String        |
+| attestation_legal_category |  [attestationLegalCategory](https://w3id.org/ebwv#attestationLegalCategory) | Indicates the legal category of this attestation ("EAA")                                                                                                     | String        |
+| vct                    |    | A URI or other collision-resistant identifier that defines the type of the SD-JWT Verifiable Credential                                                      | String        |
 
 ### 2.6 Optional metadata
 
-| **Data Identifier** | **Definition**                                                             | **Data type** |
-|---------------------|----------------------------------------------------------------------------|---------------|
-| trust_anchor_url    | URL where the trust anchor for verifying this attestation can be retrieved | URI           |
-| schema_version      | Version of the schema used                                                 | String        |
+| **Data Identifier** | **Semantic Reference**  | **Definition**                                                             | **Data type** |
+|------------------|---|----------------------------------------------------------------------------|---------------|
+| trust_anchor_url  | cred:? | URL where the trust anchor for verifying this attestation can be retrieved | URI           |
+| schema_version    | cred:? | Version of the schema used                                                 | String        |
 
 ### 2.7 Conditional metadata
 
