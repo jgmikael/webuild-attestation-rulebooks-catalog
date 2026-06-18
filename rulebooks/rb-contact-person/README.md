@@ -162,7 +162,7 @@ This attestation type is classified as:
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                                                                                 | **Optionality**  | **Encoding format** |
 |---------------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------|------------------|---------------------|
-| legal_person_id     | --                     | EBW Organization Identifier — Identifier of the employing legal entity according to the European Business Wallet (EBW) framework | M                | tstr                |
+| legal_person_id     | [legalIdentifier](https://w3id.org/ebwv#legalIdentifier) | EBW Organization Identifier — Identifier of the employing legal entity according to the European Business Wallet (EBW) framework | M                | tstr                |
 | contact_person      | --                     | Object representing details of an individual contact person. This can be repeated for multiple contacts.                        | M (at least one) | Object              |
 
 **ContactPerson Attributes**
