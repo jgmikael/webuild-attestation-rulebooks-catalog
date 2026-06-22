@@ -122,8 +122,8 @@ This attestation type MAY be classified as:
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                        | **Data type** |
 |---------------------|------------------------|---------------------------------------|---------------|
-| gs1                 | ...                    | Information about the gs1 information | Object        |
-| address             | ...                    | Information about the address         | Object        |
+| gs1                 | [gs1](https://w3id.org/ebwv#gs1)  | Information about the gs1 information | Object; the semantic reference points to the class "EconomicOperator"  |
+| address             | [registeredAddress](https://w3id.org/ebwv#registeredAddress)  | Information about the address         | Object        |
 
 ### 2.2 Mandatory attributes
 
@@ -131,18 +131,18 @@ This attestation type MAY be classified as:
 
 | **Data Identifier**   | **Semantic Reference** | **Definition**                                      | **Data type**  |
 |-----------------------|------------------------|-----------------------------------------------------|----------------|
-| organizationLegalName | ...                    | The legal entity name registered with GS1           | Rdf:langString |
-| licenceKey            | ...                    | The GS1 Company Prefix assigned to the organization | xsd:integer    |
-| GlobalLocationNumber  | ...                    | The GLN (Global Location Number)                    | xsd:String     |
+| organizationLegalName | [legalName](https://w3id.org/ebwv#legalName) | The legal entity name registered with GS1           | Rdf:langString |
+| licenceKey            | [licenceKey](https://w3id.org/ebwv#licenceKey) | The GS1 Company Prefix assigned to the organization | xsd:integer    |
+| GlobalLocationNumber  | [identifier](https://w3id.org/ebwv#identifier)  | The GLN (Global Location Number)                    | xsd:String     |
 
 **Address**
 
 | **Data Identifier** | **Semantic Reference** | **Definition**                                                                        | **Data type**       |
 |---------------------|------------------------|---------------------------------------------------------------------------------------|---------------------|
-| postal_code         | ...                    | The postal code of the city where the legal owner currently is registered or operates | String              |
-| locality            | ...                    | The city where the legal owner currently is registered or operates                    | String              |
-| region              | ...                    | The region where the legal owner currently is registered or operates                  | String              |
-| country             | ...                    | The country where the legal owner currently is registered or operates                 | ISO 3166-1 alpha-2  |
+| postal_code         | [postCode](https://w3id.org/ebwv#postCode)  | The postal code of the city where the legal owner currently is registered or operates | String              |
+| locality            | [postName](https://w3id.org/ebwv#postName) | The city where the legal owner currently is registered or operates                    | String              |
+| region              | [adminUnitL2](https://w3id.org/ebwv#adminUnitL2) | The region where the legal owner currently is registered or operates                  | String              |
+| country             | [adminUnitL1](https://w3id.org/ebwv#adminUnitL1) | The country where the legal owner currently is registered or operates                 | ISO 3166-1 alpha-2  |
 
 ### 2.3 Optional attributes
 
