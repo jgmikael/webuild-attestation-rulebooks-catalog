@@ -132,7 +132,7 @@ This attestation type MAY be classified as:
 | **Data Identifier**   | **Semantic Reference** | **Definition**                                      | **Data type**  |
 |-----------------------|------------------------|-----------------------------------------------------|----------------|
 | organizationLegalName | [legalName](https://w3id.org/ebwv#legalName) | The legal entity name registered with GS1           | Rdf:langString |
-| licenceKey            | [licenceKey](https://w3id.org/ebwv#licenceKey) | The GS1 Company Prefix assigned to the organization | xsd:integer    |
+| licenceKey            | [licenceKey](https://w3id.org/ebwv#licenceKey) (property of a new "Licence" class) OR [GS1CompanyPrefix](https://w3id.org/ebwv#GS1CompanyPrefix)| The GS1 Company Prefix assigned to the organization | xsd:integer    |
 | GlobalLocationNumber  | [identifier](https://w3id.org/ebwv#identifier)  | The GLN (Global Location Number)                    | xsd:String     |
 
 **Address**
@@ -155,20 +155,20 @@ mandatory or optional as specified above.
 
 ### 2.5 Mandatory metadata
 
-| **Data Identifier**        | **Definition**                                                                                                                                                     | **Data type** |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| issuance_date              | The date and time when the attestation was issued (ISO 8601)                                                                                                       | DateTime      |
-| expiry_date                | The date and time when the attestation expires (ISO 8601)                                                                                                          | DateTime      |
-| issuing_entity             | The identifier of the legal entity that issued the attestation (typically the subject entity itself for self-issued attestations, or the QTSP identifier for QEAA) | String        |
-| attestation_legal_category | Indicates the legal category of this attestation ("EAA" or "pubEAA"/"QEAA")                                                                                       | String        |
-| vct                          | A unique identifier (URL or URN) for the credential type, indicating which claims must be present and which can be selectively disclosed              | String        |
+| **Data Identifier**     | **Semantic Reference**  | **Definition**                                                                                                                                                     | **Data type** |
+|-------------------------|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| issuance_date           | [cred:validFrom](https://www.w3.org/2018/credentials/#validFrom)  | The date and time when the attestation was issued (ISO 8601)                                                                                                       | DateTime      |
+| expiry_date             | [cred:validUntil](https://www.w3.org/2018/credentials/#validUntil)   | The date and time when the attestation expires (ISO 8601)                                                                                                          | DateTime      |
+| issuing_entity          | [cred:issuer](https://www.w3.org/2018/credentials/#issuer)  | The identifier of the legal entity that issued the attestation (typically the subject entity itself for self-issued attestations, or the QTSP identifier for QEAA) | String        |
+| attestation_legal_category | [attestationLegalCategory](https://w3id.org/ebwv#attestationLegalCategory)  | Indicates the legal category of this attestation ("EAA" or "pubEAA"/"QEAA")                                                                                       | String        |
+| vct                      |    | A unique identifier (URL or URN) for the credential type, indicating which claims must be present and which can be selectively disclosed              | String        |
 
 ### 2.6 Optional metadata
 
-| **Data Identifier** | **Definition**                                                             | **Data type** |
-|---------------------|----------------------------------------------------------------------------|---------------|
-| trust_anchor_url    | URL where the trust anchor for verifying this attestation can be retrieved | URI           |
-| schema_version      | Version of the schema used                                                 | String        |
+| **Data Identifier** | **Semantic Reference**  | **Definition**                                                             | **Data type** |
+|------------------|---|----------------------------------------------------------------------------|---------------|
+| trust_anchor_url | cred:? | URL where the trust anchor for verifying this attestation can be retrieved | URI           |
+| schema_version   | cred:? | Version of the schema used                                                 | String        |
 
 ### 2.7 Conditional metadata
 
