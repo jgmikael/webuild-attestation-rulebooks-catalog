@@ -112,7 +112,7 @@ This attestation type is classified as:
 
 | **Data Identifier** | **Semantic Reference**                                                                    | **Definition**                                                                                 | **Optionality** | **Encoding format** |
 |---------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------|---------------------|
-| name                | [givenName – Schema.org Property](https://schema.org/givenName)                           | Given name of the employee.                                                                    | M               | tstr                |
+| name                | [givenName](https://w3id.org/ebwv#givenName)<br>[givenName – Schema.org Property](https://schema.org/givenName)                           | Given name of the employee.                                                                    | M               | tstr                |
 | surname             | [familyName – Schema.org Property](https://schema.org/familyName)                         | Family name of the employee.                                                                   | M               | tstr                |
 | employee_id         | --                                                                                        | An alphanumeric identifier of the employee assigned by the employing organization.             | M               | tstr                |
 
