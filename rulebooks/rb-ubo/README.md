@@ -137,6 +137,7 @@ and the Bank need to check it afterwards into TR.
 **Data Model:*
 
 The UBO model follows a hierarchical structure:
+*we do not aggree with the structure. Just define the meaning of the required attributes. Everthing is coonected to UBO, not Person. Also the definitions of all entities are not defined correctly*
 ```
 UBO [1...n]
 ├─ jurisdiction (tstr) (M)
@@ -144,41 +145,41 @@ UBO [1...n]
 │   ├─ first_name (tstr) (M)      
 │   ├─ surname (tstr) (M)
 │   ├─ birth_date (date) (M)      
-├─ birth_place (Object) (M)
-│   ├── locality (M)
-│   ├── country (M)
-│   └── region (O)
-├─ citizenship
-│   └── citizenship(s) [1..n] (M)
-├─ residential_address (Object)(M)
-│   ├── street (M)
-│   ├── house_number (M)
-│   ├── locality (M)
-│   ├── region (M)
-│   ├── postal_code (M)
-│   └── country (M)
-├─ contact_address (Object) (O)
-│   ├── street (M)
-│   ├── house_number (M)
-│   ├── locality (M)
-│   ├── region (M)
-│   ├── postal_code (M)
-│   └── country(s)
-├─ person_identifier (Object) M
-│   ├── document_type (M)
-│   ├── document_number (M)
-│   ├── issuing_country (M)
-│   └── expiry_date (M)
-├─ person_unique_identifier (Object) (O)
-│   ├── identifier_unique (O)
-│   └── identifier_issuing_authority (O)
+    ├─ birth_place (Object) (M)
+    │   ├── locality (M)
+    │   ├── country (M)
+    │   └── region (O)
+    ├─ citizenship
+    │   └── citizenship(s) [1..n] (M)
+    ├─ residential_address (Object)(M)
+    │   ├── street (M)
+    │   ├── house_number (M)
+    │   ├── locality (M)
+    │   ├── region (M)
+    │   ├── postal_code (M)
+    │   └── country (M)
+    ├─ contact_address (Object) (O)
+    │   ├── street (M)
+    │   ├── house_number (M)
+    │   ├── locality (M)
+    │   ├── region (M)
+    │   ├── postal_code (M)
+    │   └── country(s)
+    ├─ person_identifier (Object) M
+    │   ├── document_type (M)
+    │   ├── document_number (M)
+    │   ├── issuing_country (M)
+    │   └── expiry_date (M)
+    ├─ person_unique_identifier (Object) (O)
+    │   ├── identifier_unique (O)
+    │   └── identifier_issuing_authority (O)
 ├─ justification (Object) (M)                           // How this person qualifies as UBO
-│   ├─ threshold_met (Array of enum) (M)       // e.g., "ownership_25_plus", "control_voting_25_plus", "control_management"
-│   ├─ ownership_percentage (Decimal) (O)      // Total direct/indirect ownership percentage
-│   ├─ voting_rights_percentage (Decimal) (O)  // Total direct/indirect voting rights percentage
-│   └─ control_details (tstr) (O)              // Free text if control is via other means
-├─ effective_date (date) (M)                   // Date when this UBO status became effective
-└─ evidence [1..n] (M)                         // At least one evidence entry required
+    │   ├─ threshold_met (Array of enum) (M)       // e.g., "ownership_25_plus", "control_voting_25_plus", "control_management"
+    │   ├─ ownership_percentage (Decimal) (O)      // Total direct/indirect ownership percentage
+    │   ├─ voting_rights_percentage (Decimal) (O)  // Total direct/indirect voting rights percentage
+    │   └─ control_details (tstr) (O)              // Free text if control is via other means
+    ├─ effective_date (date) (M)                   // Date when this UBO status became effective
+    └─ evidence [1..n] (M)                         // At least one evidence entry required
 │  ├─ id (tstr) (M)                            // Unique identifier, URI, or URN
 │  ├─ type (tstr) (M)                          // Evidence type — see Section 2.8.9
 │  ├─ url (uri) (O)                            // URI to publicly accessible source document
@@ -212,18 +213,18 @@ This attestation type MAY be classified as:
   - verify that the calculated UBO data is fully available
   - cross-check the calculations against the TR record
 
-**Attribute Overview:**
+**Attributes of UBO - [UBO](https://w3id.org/ebwv#UBO)**
 
 | **Data Identifier**        | **Semantic Reference** | **Definition**                                             | **Data Type**                         |
 |----------------------------|------------------------|------------------------------------------------------------|---------------------------------------|
-| `person`                   | —                      | Personal identity attributes of the UBO                    | Object                                |
-| `birth_place`              | —                      | Place of birth of the UBO                                  | Object                                |
-| `citizenship`              | -                      | Citizenship(s) held by the UBO (one or more nationalities) | Array of Strings (ISO 3166-1 alpha-2) |
-| `residential_address`      | —                      | Registered residential address of the UBO                  | Object                                |
-| `contact_address`          | —                      | Optional alternative contact address of the UBO            | Object                                |
-| `person_identifier`        | —                      | Government-issued identity document details of the UBO     | Object                                |
-| `person_unique_identifier` | —                      | Optional unique identifier assigned by an authority        | Object                                |
-| `justification`            | —                      | How and why this person qualifies as UBO under AMLR        | Object                                |
+| `person`                   |  [person](https://w3id.org/ebwv#person)      | Personal identity attributes of the UBO                    | Object                                |
+| `birth_place` | it is in the person class | Place of birth of the UBO | Object                                |
+| `citizenship`              | it is in the person class | Citizenship(s) held by the UBO (one or more nationalities) | Array of Strings (ISO 3166-1 alpha-2) |
+| `residential_address`      | it is in the person class | Registered residential address of the UBO                  | Object                                |
+| `contact_address`          | it is in the person class | Optional alternative contact address of the UBO            | Object                                |
+| `person_identifier`        | it is in the person class | Government-issued identity document details of the UBO     | Object                                |
+| `person_unique_identifier` | it is in the person class | Optional unique identifier assigned by an authority        | Object                                |
+| `justification`            | *this does not belong to the person, but to the UBO* | How and why this person qualifies as UBO under AMLR        | Object                                |
 | `source`                   | —                      | Supporting evidence for the UBO determination              | Array of Objects                      |
 
 ### 2.2 Mandatory Attributes
