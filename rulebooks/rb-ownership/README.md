@@ -8,6 +8,7 @@
   * [Baumgardt Michaela, Commerzbank]
   * [Ricky Lamberty, Robert Bosch GmbH]
   * @TODO Florin — Add the reviewers from attestation design (meetings UseCase, Banks, TransparentRegister)
+  * @bart
 
 | Version | Date       | Description                                                                            |
 |---------|------------|----------------------------------------------------------------------------------------|
