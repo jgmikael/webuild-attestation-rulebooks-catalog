@@ -218,24 +218,24 @@ This attestation type MAY be classified as:
 | **Data Identifier**        | **Semantic Reference** | **Definition**                                             | **Data Type**                         |
 |----------------------------|------------------------|------------------------------------------------------------|---------------------------------------|
 | `person`                   |  [person](https://w3id.org/ebwv#person)      | Personal identity attributes of the UBO                    | Object                                |
-| `birth_place` | it is in the person class | Place of birth of the UBO | Object                                |
-| `citizenship`              | it is in the person class | Citizenship(s) held by the UBO (one or more nationalities) | Array of Strings (ISO 3166-1 alpha-2) |
-| `residential_address`      | it is in the person class | Registered residential address of the UBO                  | Object                                |
-| `contact_address`          | it is in the person class | Optional alternative contact address of the UBO            | Object                                |
-| `person_identifier`        | it is in the person class | Government-issued identity document details of the UBO     | Object                                |
-| `person_unique_identifier` | it is in the person class | Optional unique identifier assigned by an authority        | Object                                |
-| `justification`            | *this does not belong to the person, but to the UBO* | How and why this person qualifies as UBO under AMLR        | Object                                |
+| `justification`            | *this does not belong to the person, but to the UBO* | How and why this person qualifies as UBO under AMLR        | Object                               |
 | `source`                   | —                      | Supporting evidence for the UBO determination              | Array of Objects                      |
 
 ### 2.2 Mandatory Attributes
 
 #### Person Attributes
 
-| **Data Identifier**  | **Semantic Reference**  | **Definition**                                                                               | **Data Type**     |
-|----------------------|-------------------------|----------------------------------------------------------------------------------------------|-------------------|
-| `first_name`         | —                       | First name(s) / given name(s) of the natural person, including middle names where applicable | String            |
-| `surname`            | —                       | Surname(s) / family name(s) of the natural person                                            | String            |
-| `birth_date`         | —                       | Date of birth of the natural person (ISO 8601 YYYY-MM-DD)                                    | String (ISO 8601) |
+| **Data Identifier**        | **Semantic Reference**  | **Definition**                                                                               | **Data Type**     |
+|----------------------------|-------------------------|----------------------------------------------------------------------------------------------|-------------------|
+| `first_name`               | —                       | First name(s) / given name(s) of the natural person, including middle names where applicable | String            |
+| `surname`                  | —                       | Surname(s) / family name(s) of the natural person                                            | String            |
+| `birth_date`               | —                       | Date of birth of the natural person (ISO 8601 YYYY-MM-DD)                                    | String (ISO 8601) |
+| `birth_place`              | it is in the person class | Place of birth of the UBO | Object                                |
+| `citizenship`              | it is in the person class | Citizenship(s) held by the UBO (one or more nationalities) | Array of Strings (ISO 3166-1 alpha-2) |
+| `residential_address`      | it is in the person class | Registered residential address of the UBO                  | Object                                |
+| `contact_address`          | it is in the person class | Optional alternative contact address of the UBO            | Object                                |
+| `person_identifier`        | it is in the person class | Government-issued identity document details of the UBO     | Object                                |
+| `person_unique_identifier` | it is in the person class | Optional unique identifier assigned by an authority        | Object                                |
 
 #### BirthPlace Attributes
 
