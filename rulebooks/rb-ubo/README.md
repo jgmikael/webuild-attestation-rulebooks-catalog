@@ -28,6 +28,7 @@
   * [Florin Coptil](mailto:florin.coptil@bosch.com)*
 
 * Feedback:
+* Semantics (Monika, Ronald, Mike, Bart)
 
 ## 1 Introduction
 
