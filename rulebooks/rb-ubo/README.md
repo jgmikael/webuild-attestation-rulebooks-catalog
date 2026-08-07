@@ -23,6 +23,7 @@
 | 0.7     | 24.06.2026 | Updates of content based on the submisson regulation and AMLR/RTS |
 | 0.8     | 29.06.2026 | Updates of content based on BOS - vocabulary                      |
 | 0.9     | 03.07.2026 | Updates in regard trust and revocation                            |
+| 0.9.1.  | 07-08-2026 | comments by Monika and Bart                                       |
 
 * Contact:
   * [Florin Coptil](mailto:florin.coptil@bosch.com)*
@@ -91,30 +92,30 @@ are intended as statements of fact.
 
 *Additional terminology specific to this attestation:*
 
-| Term                           | Description                                                                                                                                   |
-|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| UBO                            | Ultimate Beneficial Owner — a natural person who ultimately owns or controls a legal entity, as defined under AMLR 2024/1624                  |
-| NaturalPerson                  | The natural person identified as a UBO, including their personal identity attribute (first name, surname and birth date)                      |
-| BirthPlace                     | The place of birth of the natural person, including locality and country                                                                      |
-| Citizenship                    | The nationality or nationalities held by the natural person                                                                                   |
-| ResidenceAddress               | The registered residential address of the natural person                                                                                      |
-| ContactAddress                 | An optional alternative contact address for the natural person                                                                                |
-| NaturalPersonIdentifier        | A government-issued identity document (e.g., passport, national ID card) used to identify the natural person                                  |
-| NaturalPersonUniqueIdentifier  | An optional unique identifier issued by an authority to uniquely identify the natural person across systems                                   |
-| Justification                  | The object describing how and why the person qualifies as a UBO under applicable AML thresholds and control criteria                          |
-| threshold_met                  | The applicable AML threshold(s) or control criteria met by the UBO — see Section 2.8.2                                                        |
-| ownership_percentage           | The total direct and indirect ownership percentage held by the UBO (0–100)                                                                    |
-| voting_rights_percentage       | The total direct and indirect voting rights percentage held by the UBO (0–100)                                                                |
-| control_details                | Free text description of control exercised through means other than ownership percentage                                                      |
-| effective_date                 | The date from which the UBO status has been effective                                                                                         |
-| source                         | Supporting evidence substantiating the UBO determination                                                                                      |
-| KYC                            | Know Your Customer — due diligence process for verifying customer identity and assessing risk in financial relationships                      |
-| KYS                            | Know Your Supplier — due diligence process for verifying supplier credentials, integrity, and risk exposure                                   |
-| AML                            | Anti-Money Laundering — regulatory framework requiring financial institutions and obliged entities to identify and report suspicious activity |
-| AMLR                           | Anti-Money Laundering Regulation — EU Regulation 2024/1624 establishing harmonised AML/CFT rules across the EU                                |
-| ISO 3166-1                     | International standard defining country codes (alpha-2 and alpha-3 formats)                                                                   |
-| ISO 8601                       | International standard for date and time representations (e.g., YYYY-MM-DD)                                                                   |
-| ICAO 9303                      | International Civil Aviation Organization standard for travel documents, defining document types and number formats                           |
+| Term              | Semantic reference |             | Description                                                                                                                                   |
+|--------------------------------|--|----|-----------------------------------------------------------------------------------------------------------------------------------------|
+| UBO                          | https://w3id.org/ebwv#ubo | Ultimate Beneficial Owner — a natural person who ultimately owns or controls a legal entity, as defined under AMLR 2024/1624                  |
+| NaturalPerson              |  https://w3id.org/ebwv#NaturalPerson  | The natural person identified as a UBO, including their personal identity attribute (first name, surname and birth date)                      |
+| BirthPlace            |    https://w3id.org/ebwv#placeOfBirth     | The place of birth of the natural person, including locality and country                                                                      |
+| Citizenship           |    https://w3id.org/ebwv#citizenship     | The nationality or nationalities held by the natural person                                                                                   |
+| ResidenceAddress   |       https://w3id.org/ebwv#registeredAddress     | The registered residential address of the natural person                                                                                      |
+| ContactAddress      |       https://w3id.org/ebwv#registeredAddress    | An optional alternative contact address for the natural person                                                                                |
+| NaturalPersonIdentifier  |   can this also be the PID?   | A government-issued identity document (e.g., passport, national ID card) used to identify the natural person                                  |
+| NaturalPersonUniqueIdentifier | be more specific in your definiton and give an example. | An optional unique identifier issued by an authority to uniquely identify the natural person across systems                                   |
+| Justification                | https://w3id.org/ebwv#justification  | The object describing how and why the person qualifies as a UBO under applicable AML thresholds and control criteria                          |
+| threshold_met                | to do (threshold brackets) | The applicable AML threshold(s) or control criteria met by the UBO — see Section 2.8.2                                                        |
+| ownership_percentage         | https://w3id.org/ebwv#ownershipPercentage | The total direct and indirect ownership percentage held by the UBO (0–100)                                                                    |
+| voting_rights_percentage     | https://w3id.org/ebwv#votingRightsPercentage | The total direct and indirect voting rights percentage held by the UBO (0–100)                                                                |
+| control_details               | this is not machine readable, please come with code lists. At least come with a max. string length | Free text description of control exercised through means other than ownership percentage                                                      |
+| effective_date               | https://w3id.org/ebwv#startDate | The date from which the UBO status has been effective                                                                                         |
+| source                      |  https://w3id.org/ebwv#source (domain is any object or literal)| Supporting evidence substantiating the UBO determination                                                                                      |
+| KYC                          | to do | Know Your Customer — due diligence process for verifying customer identity and assessing risk in financial relationships                      |
+| KYS                         | to do  | Know Your Supplier — due diligence process for verifying supplier credentials, integrity, and risk exposure                                   |
+| AML                          | to do  | Anti-Money Laundering — regulatory framework requiring financial institutions and obliged entities to identify and report suspicious activity |
+| AMLR                        |  to do  | Anti-Money Laundering Regulation — EU Regulation 2024/1624 establishing harmonised AML/CFT rules across the EU                                |
+| ISO 3166-1                   | to do  | International standard defining country codes (alpha-2 and alpha-3 formats)                                                                   |
+| ISO 8601                     | to do  | International standard for date and time representations (e.g., YYYY-MM-DD)                                                                   |
+| ICAO 9303                     | to do | International Civil Aviation Organization standard for travel documents, defining document types and number formats                           |
 
 ## 2 Attestation Attributes and Metadata
 
