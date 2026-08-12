@@ -197,11 +197,11 @@ Administrative unit
 #### 2.2.1 Mandatory attributes
 | data identifier                | Semantic Reference                          | Definition                              | Data Type       | Example Value      |
 |--------|----------|--------------------------------------------------------------------------|------------|--------------|
-| vat_id                         | VAT Identification Number                   | Unique identifier for VAT purposes     | String           | DE123456789        |
-| administrative_unit_name       | Name of the Administrative Unit             | Name of the unit responsible for VAT    | String           | Siemens        |
-| validity_period                | Period of Validity                          | Duration during which the data is valid| Date Range       | 2026-01-01 to 2026-12-31 |
+| vat_id                         | [identifier](https://w3id.org/ebwv#identifier)  | Unique identifier for VAT purposes     | String           | DE123456789        |
+| administrative_unit_name       | [VATRegistrationUnit](https://w3id.org/ebwv#VATRegistrationUnit) | Name of the unit responsible for VAT    | String           | Siemens        |
+| validity_period                | [validityPeriod](https://w3id.org/ebwv#validityPeriod) | Duration during which the data is valid| Date Range       | 2026-01-01 to 2026-12-31 |
 | economic_operator              | [EconomicOperator](https://w3id.org/ebwv#EconomicOperator)  | Entity responsible for economic operations | Economic Operator object        | ..|
-| issuer                         | Issuing Authority                           | Authority that issues the VAT ID       | Issuer Object           | ..   |
+| issuer                         | [cred:issuer](https://www.w3.org/2018/credentials#issuer) | Authority that issues the VAT ID       | Issuer Object           | ..   |
 
 
 
