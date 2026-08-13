@@ -94,7 +94,7 @@ The attestation is bound to a single passenger and a single ferry journey. It SH
 
 | **Data Identifier** | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |---------------------|------------------------|----------------|---------------|-------------------|
-| `attestation_legal_category` | ARF Topic 12 / Rulebook legal category indication | Indicates the legal category of the attestation. | string | `non-qualified-EAA` |
+| `attestation_legal_category` | [attestationLegalCategory](https://w3id.org/ebwv#attestationLegalCategory) <br> ARF Topic 12 / Rulebook legal category indication | Indicates the legal category of the attestation. | string | `non-qualified-EAA` |
 | `identifier` | N/A | Unique identifier of the boarding pass. | string | `BP-2026-000123456` |
 | `ticketQR` | N/A | Encoded ticket representation used for scanning at boarding control. | string | `M1_FASTFERRIES_20260615_000123456` |
 | `ticketNumber` | N/A | Ferry ticket number. | string | `000123456` |
