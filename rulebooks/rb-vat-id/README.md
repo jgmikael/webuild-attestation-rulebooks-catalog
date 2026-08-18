@@ -198,7 +198,7 @@ Administrative unit
 | data identifier                | Semantic Reference                          | Definition                              | Data Type       | Example Value      |
 |--------|----------|--------------------------------------------------------------------------|------------|--------------|
 | vat_id                         | [identifier](https://w3id.org/ebwv#identifier)  | Unique identifier for VAT purposes     | String           | DE123456789        |
-| administrative_unit_name       | [VATRegistrationUnit](https://w3id.org/ebwv#VATRegistrationUnit) | Name of the unit responsible for VAT    | String           | Siemens        |
+| administrative_unit_name       | [VATRegistrationUnit](https://w3id.org/ebwv#VATRegistrationUnit).[schema:name](https://schema.org/name) | Name of the unit responsible for VAT    | String           | Siemens        |
 | validity_period                | [cred:validFrom](https://www.w3.org/2018/credentials/#validFrom)<br>[cred:validUntil](https://www.w3.org/2018/credentials/#validUntil) | Duration during which the data is valid| Date Range       | 2026-01-01 to 2026-12-31 |
 | economic_operator              | [EconomicOperator](https://w3id.org/ebwv#EconomicOperator)  | Entity responsible for economic operations | Economic Operator object        | ..|
 | issuer                         | [cred:issuer](https://www.w3.org/2018/credentials#issuer) | Authority that issues the VAT ID       | Issuer Object           | ..   |
@@ -209,9 +209,9 @@ Administrative unit
 | **data identifier**  | **Semantic Reference** | **Definition** | **Data type** | **Example value** |
 |--------|----------|--------------------------------------------------------------------------|------------|--------------|
 | administrative_unit_type                | [type](https://w3id.org/ebwv#type)  | Type (e.g., Government, Local Authority, B.V, GmbH)| String | GmbH          |
-| administrative_unit_address             | [correspondenceAddress](https://w3id.org/ebwv#correspondenceAddress) |  The address where the company is located based on the information from the authentic source of the VAT-ID. This address may differ from the address in the business register.           | Address Object           | ...  |
-| economic_activity_type                  | [activity](https://w3id.org/ebwv#activity)  | Type of business this administrative unit is registered| Economic Activity Type Object | ...     |
-| registered_EU_cross_border_transactions | TBD  | Boolean to indicate that the VAT-identification number of the economic operator registered in the European Union for cross border transactions on goods or services   | Boolean            | TRUE |
+| administrative_unit_address             | [VATRegistrationUnit](https://w3id.org/ebwv#VATRegistrationUnit).[address](https://w3id.org/ebwv#address)|  The address where the company is located based on the information from the authentic source of the VAT-ID. This address may differ from the address in the business register.           | Address Object           | ...  |
+| economic_activity_type                  | [VATRegistrationUnit](https://w3id.org/ebwv#VATRegistrationUnit).[activity](https://w3id.org/ebwv#activity)  | Type of business this administrative unit is registered| Economic Activity Type Object | ...     |
+| registered_EU_cross_border_transactions | [VATRegistrationUnit](https://w3id.org/ebwv#VATRegistrationUnit).[references](https://w3id.org/ebwv#references) | Boolean to indicate that the VAT-identification number of the economic operator registered in the European Union for cross border transactions on goods or services   | Boolean            | TRUE |
 
 ### 2.3 Economic Operator 
 #### 2.3.1 Mandatory attributes
